@@ -84,6 +84,7 @@
                       "parentRowSpace": 10,
                       "source": "https://www.example.com",
                       "type": "IFRAME_WIDGET",
+                      "title": "",
                       "hideCard": false,
                       "borderOpacity": 100,
                       "animateLoading": true,
@@ -115,7 +116,7 @@
               "rightColumn": 64,
               "widgetId": "usirkp6qkh",
               "containerStyle": "card",
-              "isVisible": "{{List1.listData != undefined}}",
+              "isVisible": "{{List1.listData !=undefined && List1.listData.length > 0}}",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -202,7 +203,7 @@
                 }
               },
               "widgetName": "List1",
-              "listData": "{{ \nSearch.data.map((item) => {\n   return {\n\t\t \"title\":item.title,\n\t\t \"content\":item.content};\n})\n}}",
+              "listData": "{{function(){\n\tif (Search.data.length != undefined) {\nreturn Search.data.map((item) => {\n   return {\n\t\t \"title\":item.title,\n\t\t \"content\":item.content};\n})}}()\n}}",
               "isCanvas": true,
               "dynamicPropertyPathList": [
                 {
@@ -396,7 +397,7 @@
               "rightColumn": 38,
               "itemBackgroundColor": "#FFFFFF",
               "widgetId": "mcqlwy2as8",
-              "isVisible": "{{List1.listData.length > 0}}",
+              "isVisible": "{{List1.listData != undefined && List1.listData.length > 0}}",
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false
