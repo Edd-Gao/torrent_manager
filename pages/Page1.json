@@ -42,7 +42,7 @@
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
-              "animateLoading": false,
+              "animateLoading": true,
               "parentColumnSpace": 18.90625,
               "dynamicTriggerPathList": [],
               "leftColumn": 38,
