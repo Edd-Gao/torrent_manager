@@ -1,0 +1,481 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1222,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1290,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 53,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "enclosure",
+                "link",
+                "guid",
+                "_id",
+                "title",
+                "categories",
+                "pubDate",
+                "customColumn1",
+                "content"
+              ],
+              "isVisibleDownload": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.pubDate.outputFormat"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 13,
+              "bottomRow": 102,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "onPageChange": "{{GetItems.run()}}",
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 18.796875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onPageChange"
+                }
+              ],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.content.computedValue"
+                },
+                {
+                  "key": "primaryColumns.pubDate.computedValue"
+                },
+                {
+                  "key": "primaryColumns.categories.computedValue"
+                },
+                {
+                  "key": "primaryColumns.guid.computedValue"
+                },
+                {
+                  "key": "primaryColumns.link.computedValue"
+                },
+                {
+                  "key": "primaryColumns.enclosure.computedValue"
+                },
+                {
+                  "key": "primaryColumns.title.computedValue"
+                },
+                {
+                  "key": "primaryColumns._id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.pubDate.outputFormat"
+                },
+                {
+                  "key": "totalRecordsCount"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.buttonLabel"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.buttonLabel"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "appsmith_mongo_escape_id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                },
+                "enclosure": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "enclosure",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "enclosure",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.enclosure))}}"
+                },
+                "link": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "link",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "link",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.link))}}"
+                },
+                "guid": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "guid",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "guid",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.guid))}}"
+                },
+                "customColumn1": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "iconButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "下载",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonColor": "#03B365",
+                  "menuColor": "#03B365",
+                  "labelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
+                  "iconName": "download"
+                },
+                "categories": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "categories",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "分类",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => (  \ncurrentRow.categories.map((category) => {\n   return category._;\n})\n))}}"
+                },
+                "title": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "title",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "标题",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.title))}}"
+                },
+                "pubDate": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "pubDate",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "发布日期",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.pubDate))}}",
+                  "outputFormat": "{{Table1.sanitizedTableData.map((currentRow) => ( 'YYYY-MM-DD HH:mm'))}}"
+                },
+                "content": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "content",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "content",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.content))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "dwkt2et8m2",
+              "derivedColumns": {
+                "customColumn1": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "iconButton",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "下载",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonColor": "#03B365",
+                  "menuColor": "#03B365",
+                  "labelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Action'))}}",
+                  "iconName": "download"
+                }
+              },
+              "rightColumn": 38,
+              "textSize": "PARAGRAPH",
+              "widgetId": "0ct6jtf9wi",
+              "isVisibleFilters": false,
+              "tableData": "{{Search.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": "{{Count.data}}",
+              "parentId": "0",
+              "serverSidePaginationEnabled": true,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": false,
+              "isVisiblePagination": true,
+              "primaryColumnId": "_id",
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "title": 511
+              }
+            },
+            {
+              "boxShadow": "NONE",
+              "widgetName": "Container2",
+              "borderColor": "transparent",
+              "isCanvas": true,
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.1977dca3.svg",
+              "topRow": 13,
+              "bottomRow": 102,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 18.90625,
+              "leftColumn": 38,
+              "children": [
+                {
+                  "widgetName": "Canvas2",
+                  "rightColumn": 453.75,
+                  "detachFromLayout": true,
+                  "displayName": "Canvas",
+                  "widgetId": "o4vkl30na5",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 890,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "version": 1,
+                  "hideCard": true,
+                  "parentId": "usirkp6qkh",
+                  "minHeight": 400,
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "widgetName": "Iframe1",
+                      "srcDoc": "<div width=100%>{{Table1.selectedRow.content}}</div>\n<style type=\"text/css\">\nimg {\n    width: 100%\n}\n</style>",
+                      "displayName": "Iframe",
+                      "iconSVG": "/static/media/icon.34169b6a.svg",
+                      "topRow": 0,
+                      "bottomRow": 87,
+                      "parentRowSpace": 10,
+                      "source": "https://www.example.com",
+                      "type": "IFRAME_WIDGET",
+                      "hideCard": false,
+                      "borderOpacity": 100,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.77734375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "srcDoc"
+                        }
+                      ],
+                      "borderWidth": "0",
+                      "key": "gswgb40yma",
+                      "rightColumn": 64,
+                      "widgetId": "9nfkp7qwvb",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "o4vkl30na5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false
+                    }
+                  ],
+                  "key": "ujx6amdhoj"
+                }
+              ],
+              "borderWidth": "0",
+              "key": "7dd67nlr6f",
+              "backgroundColor": "#FFFFFF",
+              "rightColumn": 64,
+              "widgetId": "usirkp6qkh",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0"
+            },
+            {
+              "widgetName": "Input1",
+              "displayName": "Input",
+              "iconSVG": "/static/media/icon.9f505595.svg",
+              "onSubmit": "{{Search.run()}}",
+              "topRow": 3,
+              "bottomRow": 9,
+              "parentRowSpace": 10,
+              "autoFocus": false,
+              "type": "INPUT_WIDGET_V2",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 18.90625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSubmit"
+                }
+              ],
+              "resetOnSubmit": false,
+              "leftColumn": 21,
+              "dynamicBindingPathList": [],
+              "labelStyle": "",
+              "inputType": "TEXT",
+              "isDisabled": false,
+              "key": "qq5bz4awhm",
+              "isRequired": false,
+              "rightColumn": 51,
+              "iconName": "search",
+              "widgetId": "perrcep4yr",
+              "isVisible": true,
+              "label": "Search:",
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "iconAlign": "left",
+              "defaultText": ""
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Count",
+              "name": "Count",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Canvas2",
+          "Container2",
+          "Iframe1",
+          "Input1",
+          "MainContainer",
+          "Table1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "6235926ef8befd1b84040a2c_623592c8f8befd1b84040a79"
+}
