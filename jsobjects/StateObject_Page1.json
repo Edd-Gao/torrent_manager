@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "StateObject",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tclearSearch: () => {\n\t\t//write code here\n\t\tSearch.clear()\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t},\n\tonSearchBarTextChange: () => {\n\t\tif (Input1.text.length === 0) {\n\t\t\tthis.clearSearch()\n\t\t}\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": []
+      },
+      {
+        "name": "myVar2",
+        "value": {}
+      }
+    ]
+  },
+  "id": "Page1_StateObject",
+  "deleted": false,
+  "gitSyncId": "6235926ef8befd1b84040a2c_6235d1aac9ed6f65f353b30e"
+}

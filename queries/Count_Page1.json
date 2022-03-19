@@ -27,7 +27,7 @@
         "smartSubstitution": true
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "isValid": true,
     "invalids": [],
     "messages": [],
